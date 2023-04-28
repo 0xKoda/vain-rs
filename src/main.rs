@@ -8,7 +8,8 @@ use std::str::FromStr;
 fn generate_ethereum_address() -> (String, SecretKey) {
     let secp = Secp256k1::new();
     let mut rng = rand::thread_rng();
-    let secret_key = SecretKey::from_slice(&rand::random::<[u8; 32]>()).expect("Secret key creation failed");
+    let secret_key =
+        SecretKey::from_slice(&rand::random::<[u8; 32]>()).expect("Secret key creation failed");
     let public_key = PublicKey::from_secret_key(&secp, &secret_key);
     let serialized_public_key = public_key.serialize_uncompressed();
     let ethereum_address: Address = {
