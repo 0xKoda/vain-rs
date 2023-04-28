@@ -1,0 +1,14 @@
+[package]
+name = "vain-rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "3.0"
+rand = "0.8"
+secp256k1 = "0.20"
+sha3 = "0.9"
+ethers = "0.6"
+hex = "0.4"
